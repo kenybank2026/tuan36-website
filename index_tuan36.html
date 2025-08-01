@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu bản thân</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0f0f0f 0%, #000000 100%);
+      color: #00ffcc;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    }
+    header {
+      background: rgba(0, 255, 170, 0.1);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00ffaa;
+      box-shadow: 0 0 20px #00ffaa33;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #00ffaa;
+      text-shadow: 0 0 10px #00ffaa88;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ccff;
+      border-left: 5px solid #00ccff;
+      padding-left: 10px;
+      text-shadow: 0 0 5px #00ccff88;
+    }
+    ul li::marker {
+      color: #00ffaa;
+    }
+    .contact a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 255, 170, 0.1);
+      border-top: 2px solid #00ffaa;
+      margin-top: 40px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xin chào! Tôi là TUẤN 36</h1>
+    <p>SIM QUỐC TẾ | DỊCH VỤ MXH | MARKETING</p>
+  </header>
+
+  <section>
+    <h2>Giới thiệu</h2>
+    <p>Tôi là một người đam mê công nghệ, có kinh nghiệm trong phát triển web, sáng tạo nội dung và làm việc tự do trên nhiều nền tảng. Tôi yêu thích việc học hỏi và chia sẻ kiến thức với cộng đồng.</p>
+
+    <h2>Kỹ năng</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js, Firebase</li>
+      <li>SEO, Content Marketing</li>
+      <li>Design cơ bản</li>
+    </ul>
+
+    <h2>Liên hệ</h2>
+    <p class="contact">
+      📧 Email: <a href="admin@tuan36.shop">TUAN 36</a><br />
+      🌐 Website: <a href="https://tuan36.shop" target="_blank">ADMIN</a><br />
+      📱 Zalo: <a href="https://zalo.me/+19065868686" target="_blank">TUẤN 36</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 [Tuấn 36]. All rights reserved.</p>
+  </footer>
+
+  <!-- Hiệu ứng chữ gõ -->
+  <script>
+    const title = document.querySelector("header h1");
+    const text = title.innerText;
+    title.innerText = "";
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        title.innerText += text[i];
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+    typeEffect();
+  </script>
+
+  <!-- Nền mã nhị phân hiệu ứng -->
+  <script>
+    const bg = document.createElement("div");
+    bg.style.position = "fixed";
+    bg.style.top = 0;
+    bg.style.left = 0;
+    bg.style.width = "100%";
+    bg.style.height = "100%";
+    bg.style.pointerEvents = "none";
+    bg.style.zIndex = "-1";
+    bg.style.overflow = "hidden";
+    bg.style.color = "#00ff88";
+    bg.style.fontFamily = "monospace";
+    bg.style.fontSize = "12px";
+    let code = "";
+    for (let i = 0; i < 2000; i++) {
+      code += Math.random() > 0.5 ? "1" : "0";
+      if (i % 80 === 0) code += "\n";
+    }
+    bg.innerText = code;
+    document.body.appendChild(bg);
+  </script>
+</body>
+</html>
